@@ -1,0 +1,259 @@
+:root {
+  --nav-link-color: #3a573a;
+  --secondary-color: #536390;
+  --font-color: #424242;
+  --bg-color: white;
+  --heading-color: #000000;
+  --center-img: none;
+  --hr-1: black;
+  --home-heading: #292922;
+  --x1h: black;
+  --x2h: red;
+  --x2: black;
+  --x2p: white;
+  --x3: rgb(240, 162, 111);
+  --x3p: rgb(20, 0, 0);
+  --x3h: rgb(63, 46, 0);
+  --x4: #1c1625;
+  --x4p: white;
+  --x4h: white;
+  --theme-color: white;
+}
+
+[data-theme="dark"] {
+  --nav-link-color: rgb(151, 243, 182);
+  --secondary-color: #818cab;
+  --font-color: #e1e1ff;
+  --bg-color: #000000;
+  --heading-color: #ffffff;
+  --center-img: white;
+  --hr-1: white;
+  --home-heading: #818cab;
+  --x1h: white;
+  --x2h: green;
+  --x2: white;
+  --x2p: black;
+  --x3: rgb(1, 32, 22);
+  --x3p: white;
+  --x3h: rgb(209, 77, 0);
+  --x4: rgb(92, 0, 92);
+  --x4p: white;
+  --x4h: rgb(8, 1, 32);
+  --theme-color: black;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  max-width: 90%;
+  margin: 0 auto;
+  font-size: calc(1rem + 0.25vh);
+}
+
+.x1 {
+  padding: 20px;
+}
+
+.x2 {
+  background-color: var(--x2);
+  padding: 20px;
+}
+
+.x2p {
+  color: var(--x2p)
+}
+
+.x3 {
+  background-color: var(--x3);
+  padding: 20px;
+}
+
+.x3p {
+  color: var(--x3p)
+}
+
+.x4 {
+  background-color: var(--x4);
+  padding: 20px;
+}
+
+.x4p {
+  color: var(--x4p)
+}
+
+h1 {
+  color: var(--heading-color);
+  font-family: "Sansita One", serif;
+  font-size: 2rem;
+  margin-bottom: 1vh;
+}
+
+.x1h {
+  margin-top: 30px;
+  color: var(--x1h);
+  font-family: "Sansita One", serif;
+  font-size: 2rem;
+  margin-bottom: 1vh;
+  text-align: center;
+}
+
+.x2h {
+  margin-top: 30px;
+  color: var(--x2h);
+  font-family: "Sansita One", serif;
+  font-size: 2rem;
+  margin-bottom: 1vh;
+  text-align: center;
+}
+
+.x3h {
+  margin-top: 30px;
+  color: var(--x3h);
+  font-family: "Sansita One", serif;
+  font-size: 2rem;
+  margin-bottom: 1vh;
+  text-align: center;
+}
+
+.x4h {
+  margin-top: 30px;
+  color: var(--x4h);
+  font-family: "Sansita One", serif;
+  font-size: 2rem;
+  margin-bottom: 1vh;
+  text-align: center;
+}
+
+.home-heading {
+  color: var(--home-heading);
+  font-family: "Sansita One", serif;
+  font-size: 2rem;
+  margin-bottom: 1vh;
+  margin-top: 40px;
+  padding-left: 10px;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.6rem;
+}
+
+a {
+  color: var(--primary-link-color);
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-weight: bold;
+}
+
+a.front-nav {
+  color: var(--nav-link-color);
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-right: solid;
+  font-weight: bold;
+}
+
+a:hover, a:focus {
+  text-decoration: line-through;
+}
+
+section {
+  max-width: 68%;
+  margin: 0 auto;
+}
+
+.post-meta {
+  font-size: 1rem;
+  font-style: italic;
+  display: block;
+  margin-bottom: 4vh;
+  color: var(--secondary-color);
+}
+
+.topnav {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 0;
+}
+
+.frontnav {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/*slider switch css */
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+}
+.theme-switch-wrapper em {
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 1rem;
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+}
+
+.slider:before {
+  background-color: rgb(0, 0, 0);
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: .4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: white;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.hr1 {
+  color: var(--hr-1);
+  background-color: var(--hr-1);
+  height: 3px;
+  width: 320px;
+  text-align: left;
+  margin-left: 0px;
+}
+.footer-hr {
+  color: var(--hr-1);
+  background-color: var(--hr-1);
+}
